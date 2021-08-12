@@ -1,4 +1,4 @@
-@ NOTE: Route 109's sail to Dewford script references local IDs from Dewford's map. 
+@ NOTE: Route 109's sail to Dewford script references local IDs from Dewford's map.
 @  These are labeled in DewfordTown/scripts.inc
 
 Route109_MapScripts:: @ 81EE75F
@@ -15,6 +15,12 @@ Route109_EventScript_StartDepartForDewford:: @ 81EE760
 	case DIR_SOUTH, Route109_EventScript_EnterBoatSouth
 	case DIR_WEST, Route109_EventScript_EnterBoatWest
 	case DIR_EAST, Route109_EventScript_EnterBoatEast
+	end
+
+Route109_EventScript_FightersTraining:: @ 800001
+	msgbox Route109_Text_Hey, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Route109_Movement_PushRight
 	end
 
 Route109_EventScript_EnterBoatSouth:: @ 81EE7A5
@@ -64,6 +70,13 @@ Route109_EventScript_DoSailToDewford:: @ 81EE7D5
 	copyobjectxytoperm LOCALID_BRINEY_DEWFORD
 	release
 	end
+
+Route109_Movement_PushRight: @ 800008
+	lock_facing_direction
+	walk_right
+	unlock_facing_direction
+	delay_8
+	step_end
 
 Route109_Movement_SailToDewford: @ 81EE84F
 	walk_in_place_fastest_down
@@ -350,6 +363,18 @@ Route109_EventScript_AlreadyReceivedSoftSand:: @ 81EE9F2
 	release
 	end
 
+Route109_EventScript_BlackBeltTough:: @ 80000A
+	msgbox Route109_Text_BrawlyTough, MSGBOX_NPC
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	end
+
+Route109_EventScript_BattleGirl:: @ 80000F
+	msgbox Route109_Text_BodyMind, MSGBOX_NPC
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	end
+
 Route109_EventScript_Woman:: @ 81EEA06
 	msgbox Route109_Text_LittleKidsDartAround, MSGBOX_NPC
 	end
@@ -521,6 +546,31 @@ Route109_Text_ChillAtMyPapasSpot: @ 81EEEB4
 	.string "Whether you're hot to trot,\l"
 	.string "or cool cat not,\l"
 	.string "chill at my papa's spot!$"
+
+Route109_Text_BrawlyTough: @ 80000B
+	.string "I've heard BRAWLY's\n"
+	.string "tough as nails!$"
+
+Route109_Text_BrawlyStillTough: @ 80000C
+	.string "I heard BRAWLY lost\n"
+	.string "to some kid...\p"
+	.string "BAH! He's still tough!$"
+
+Route109_Text_BodyMind: @ 80000D
+	.string "I have to train both my\n"
+	.string "body and mind to beat BRAWLY!$"
+
+Route109_Text_TrainedALot: @ 80000E
+	.string "Apparently BRAWLY lost to a kid...\p"
+	.string "That kid must have\n"
+	.string "trained a lot!$"
+
+Route109_Text_Hey: @ 800002
+	.string "Hey!\p"
+	.string "The two of us are training\n"
+	.string "to defeat BRAWLY!\p"
+	.string "We can't allow weaklings\n"
+	.string "like you to interrupt us!!$"
 
 Route109_Text_LittleKidsDartAround: @ 81EEF08
 	.string "Little kids can dart around so quickly…\p"

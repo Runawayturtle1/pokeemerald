@@ -111,6 +111,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated:: @ 820DF2B
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
+	setflag FLAG_HIDE_ROUTE_120_STEVEN
 	release
 	end
 
@@ -427,4 +428,3 @@ MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons: @ 820EAFD
 	.string "You've only one POKéMON with you!\p"
 	.string "Come see me with two or more\n"
 	.string "POKéMON, all right?$"
-

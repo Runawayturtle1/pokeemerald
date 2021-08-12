@@ -226,7 +226,7 @@
 // 1 bit each in the Pokémon struct. Gen 4 hard-codes
 // each of these to the given name. In Gen 3 they're
 // used to get an index into giftRibbons in the save block,
-// which can have a value 0-64 (0 is 'no ribbon') that 
+// which can have a value 0-64 (0 is 'no ribbon') that
 // corresponds to one of the special ribbons listed
 // in gGiftRibbonDescriptionPointers. Most of these were
 // never distributed
@@ -285,9 +285,9 @@
 #define MAX_PER_STAT_IVS 31
 #define MAX_IV_MASK 31
 #define USE_RANDOM_IVS (MAX_PER_STAT_IVS + 1)
-#define MAX_PER_STAT_EVS 255
-#define MAX_TOTAL_EVS 510
-#define EV_ITEM_RAISE_LIMIT 100
+#define MAX_PER_STAT_EVS 1
+#define MAX_TOTAL_EVS 1
+#define EV_ITEM_RAISE_LIMIT 0
 
 // Battle move flags
 #define FLAG_MAKES_CONTACT          (1 << 0)

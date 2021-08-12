@@ -551,6 +551,14 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex:: @ 81FA2F8
 	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex, MSGBOX_DEFAULT
 	closemessage
+	givemon SPECIES_EEVEE, 5, ITEM_NONE
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_ReceivedEevee, MSGBOX_DEFAULT
+	waitfanfare
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GiveEeveeNickname, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_NicknameEevee
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_EeveeVersatile, MSGBOX_DEFAULT
 	applymovement LOCALID_RIVAL, LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight
@@ -567,6 +575,11 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex:: @ 81FA2F8
 	setvar VAR_LITTLEROOT_TOWN_STATE, 3
 	releaseall
 	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_NicknameEevee:: @ 800006
+	setvar VAR_0x8004, 1
+	call Common_EventScript_NameReceivedPartyMon
+	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls:: @ 81FA352
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese, MSGBOX_DEFAULT
@@ -809,7 +822,26 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex: @ 81FAC4B
 	.string "Whenever my kid catches a rare POKéMON\n"
 	.string "and records its data in the POKéDEX,\l"
 	.string "why, {RIVAL} looks for me while I'm out\l"
-	.string "doing fieldwork, and shows me.$"
+	.string "doing fieldwork, and shows me.\p"
+	.string "Oh, that reminds me!\p"
+	.string "In HOENN, it's customary for\n"
+	.string "TRAINERS to do DOUBLE BATTLES.\p"
+	.string "But you can't do a DOUBLE BATTLE\n"
+	.string "with only 1 POKéMON.\p"
+	.string "So here, take this EEVEE!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_ReceivedEevee: @ 800004
+	.string "{PLAYER} got an EEVEE\n"
+	.string "from PROF. BIRCH$"
+
+LittlerootTown_ProfessorBirchsLab_Text_GiveEeveeNickname: @ 800007
+	.string "Want to give a nickname to\n"
+	.string "the EEVEE you received?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_EeveeVersatile: @ 800005
+	.string "EEVEEs are very versatile!\p"
+	.string "I'm sure your new friend\n"
+	.string "will be very useful.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait: @ 81FAD6F
 	.string "PROF. BIRCH: Countless POKéMON\n"
