@@ -422,7 +422,7 @@
       "x": 12,
       "y": 0,
       "elevation": 3,
-      "item": "ITEM_GREAT_BALL",
+      "item": "ITEM_TM06_TOXIC",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_GREAT_BALL"
     },
     {
