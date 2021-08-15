@@ -765,8 +765,6 @@ static const struct TrainerMon sParty_Simon[] = {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_AZURILL,
-    .nickname = _("Fuckface"),
-    .shiny = TRUE,
     },
     {
     .iv = 0,
@@ -6788,6 +6786,7 @@ static const struct TrainerMon sParty_BrendanRoute103Mudkip[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_TREECKO,
+    .moves = {MOVE_POUND, MOVE_LEER}
     }
 };
 
@@ -6832,6 +6831,7 @@ static const struct TrainerMon sParty_BrendanRoute103Treecko[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_TORCHIC,
+    .moves {MOVE_SCRATCH, MOVE_GROWL}
     }
 };
 
@@ -6876,6 +6876,7 @@ static const struct TrainerMon sParty_BrendanRoute103Torchic[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_MUDKIP,
+    .moves = {MOVE_TACKLE, MOVE_GROWL}
     }
 };
 
@@ -6920,6 +6921,7 @@ static const struct TrainerMon sParty_MayRoute103Mudkip[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_TREECKO,
+    .moves = {MOVE_POUND, MOVE_LEER}
     }
 };
 
@@ -6964,6 +6966,7 @@ static const struct TrainerMon sParty_MayRoute103Treecko[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_TORCHIC,
+    .moves {MOVE_SCRATCH, MOVE_GROWL}
     }
 };
 
@@ -7008,6 +7011,7 @@ static const struct TrainerMon sParty_MayRoute103Torchic[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_MUDKIP,
+    .moves = {MOVE_TACKLE, MOVE_GROWL}
     }
 };
 

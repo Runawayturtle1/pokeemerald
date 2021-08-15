@@ -98,10 +98,10 @@ Route117_PokemonDayCare_EventScript_DaycareWoman:: @ 8291D11
 
 Route117_PokemonDayCare_EventScript_GiveMonToRaise:: @ 8291D56
 	specialvar VAR_RESULT, CountPartyNonEggMons
-	compare VAR_RESULT, 1
+	compare VAR_RESULT, 2
 	goto_if_eq Route117_PokemonDayCare_EventScript_OnlyOneMon
 	specialvar VAR_RESULT, CountPartyAliveNonEggMons
-	compare VAR_RESULT, 2
+	compare VAR_RESULT, 3
 	goto_if_eq Route117_PokemonDayCare_EventScript_OnlyTwoAliveMons
 	msgbox Route117_PokemonDayCare_Text_WhichMonShouldWeRaise, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
@@ -421,7 +421,7 @@ Route117_PokemonDayCare_Text_TookBackMon: @ 8292593
 	.string "the DAY-CARE LADY.$"
 
 Route117_PokemonDayCare_Text_YouHaveJustOneMon: @ 82925BB
-	.string "Oh? But you have just one\n"
+	.string "Oh? But you have just two\n"
 	.string "POKéMON.\p"
 	.string "Come back another time.$"
 
