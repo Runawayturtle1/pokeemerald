@@ -3,7 +3,7 @@ Route102_EventScript_ItemPotion:: @ 8290CD8
 	end
 
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
-	finditem ITEM_GUARD_SPEC
+	finditem ITEM_RARE_CANDY, 99
 	end
 
 Route103_EventScript_ItemPPUp:: @ 8290CF2

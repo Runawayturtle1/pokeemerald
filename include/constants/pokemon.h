@@ -413,6 +413,9 @@
 #define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  30     // Pokémon reaches the specified level with a Dark Type Pokémon in party
 #define EVO_TRADE_SPECIFIC_MON            31     // Pokémon is traded for a specified Pokémon
 #define EVO_SPECIFIC_MAP                  32     // Pokémon levels up on specified map
+#define EVO_LEVEL_ATK_GT_SPDEF            33     // Pokémon reaches the specified level with attack > special defense
+#define EVO_LEVEL_ATK_EQ_SPDEF            34     // Pokémon reaches the specified level with attack = special defense
+#define EVO_LEVEL_ATK_LT_SPDEF            35     // Pokémon reaches the specified level with attack < special defense
 
 #define EVOS_PER_MON 10
 
