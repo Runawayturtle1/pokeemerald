@@ -612,7 +612,7 @@ RustboroCity_EventScript_ReturnGoods:: @ 81E0C5B
 	compare VAR_TEMP_1, 4
 	call_if_eq RustboroCity_EventScript_EmployeeFacePlayerRight
 	msgbox RustboroCity_Text_YouGotItThankYou, MSGBOX_DEFAULT
-	giveitem ITEM_GREAT_BALL
+	giveitem ITEM_TM41_TORMENT
 	compare VAR_RESULT, FALSE
 	call_if_eq RustboroCity_EventScript_BagFull
 	msgbox RustboroCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
@@ -1145,7 +1145,7 @@ RustboroCity_Text_YouGotItThankYou: @ 81E194D
 	.string "You got them back!\p"
 	.string "You really are a great TRAINER!\p"
 	.string "I know! As my thanks, I'll give you\n"
-	.string "another GREAT BALL!$"
+	.string "another TM!$"
 
 RustboroCity_Text_YoureLoadedWithItems: @ 81E19E5
 	.string "You're loaded with items.\n"

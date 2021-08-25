@@ -52,13 +52,16 @@ const u8 gItemEffect_SuperPotion[7] = {
 #endif
 };
 
-const u8 gItemEffect_FullHeal[6] = {
+const u8 gItemEffect_FullHeal[7] = {
     [3] = ITEM3_STATUS_ALL,
+    [4] = ITEM4_HEAL_PP | ITEM4_REVIVE | ITEM4_HEAL_HP,
+    [6] = ITEM6_HEAL_PP_FULL | ITEM6_HEAL_HP_FULL, 
 };
 
 const u8 gItemEffect_Revive[7] = {
     [4] = ITEM4_REVIVE | ITEM4_HEAL_HP,
     [6] = ITEM6_HEAL_HP_HALF,
+
 };
 
 const u8 gItemEffect_MaxRevive[7] = {

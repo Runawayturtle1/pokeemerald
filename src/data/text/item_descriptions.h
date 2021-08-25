@@ -181,9 +181,9 @@ static const u8 sSuperPotionDesc[] = _(
     "60 points.");
 
 static const u8 sFullHealDesc[] = _(
-    "Heals all the\n"
-    "status problems of\n"
-    "one Pokémon.");
+    "Fully revives\n"
+    "and restores a\n"
+    "single Pokémon.");
 
 static const u8 sReviveDesc[] = _(
     "Revives a fainted\n"
@@ -1571,9 +1571,9 @@ static const u8 sTM07Desc[] = _(
     "types except Ice.");
 
 static const u8 sTM08Desc[] = _(
-    "Bulks up the body\n"
-    "to boost both\n"
-    "Attack & Defense.");
+    "A punch is thrown\n"
+    "at wicked speed\n"
+    "to strike first.");
 
 static const u8 sTM09Desc[] = _(
     "Shoots 2 to 5 seeds\n"
@@ -1761,9 +1761,9 @@ static const u8 sTM45Desc[] = _(
     "opposite gender.");
 
 static const u8 sTM46Desc[] = _(
-    "While attacking,\n"
-    "it may steal the\n"
-    "foe's held item.");
+    "User stomps the\n"
+    "ground, reducing\n"
+    "the foe's speed.");
 
 static const u8 sTM47Desc[] = _(
     "Spreads hard-\n"
@@ -1785,6 +1785,10 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
+static const u8 sTM51Desc[] = _(
+    "A jet of boiling\n"
+    "water that may\n"
+    "cause a burn.");
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"

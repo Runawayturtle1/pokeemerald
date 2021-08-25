@@ -204,6 +204,39 @@ DewfordTown_EventScript_LandedSlateport:: @ 81E9799
 	msgbox DewfordTown_Text_BrineyLandedInSlateport, MSGBOX_DEFAULT
 	return
 
+DewfordTown_EventScript_Leaf:: @ 800026
+	lock
+	faceplayer
+	goto_if_set FLAG_MET_LEAF, DewfordTown_EventScript_LeafShop
+	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
+	waitmessage
+	setflag FLAG_MET_LEAF
+	pokemart LeafBerries_DewfordTown
+	msgbox gText_LeafGoodLuckOutThere, MSGBOX_DEFAULT
+	release
+	end
+
+
+
+DewfordTown_EventScript_LeafShop:: @ 800027
+	message gText_LeafHowCanIHelp
+	waitmessage
+	pokemart LeafBerries_DewfordTown
+	msgbox gText_LeafGoodLuckOutThere, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LeafBerries_DewfordTown: @ 800028
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_NONE
+	release
+	end
+
 DewfordTown_Movement_SailToPetalburg: @ 81E97A2
 	walk_up
 	walk_up

@@ -169,11 +169,14 @@ Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness: @ 82A78DF
 	.string "people, don't they?$"
 
 Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis: @ 82A7916
-	.string "Hello!\p"
-	.string "The more attention you give to flowers,\n"
-	.string "the more beautifully they bloom.\p"
-	.string "You'll like tending flowers. I'm sure\n"
-	.string "of it. You can have this.$"
+	.string "Hi there! My name's LEAF!\n"
+	.string "I'm from the KANTO region.\p"
+	.string "LEAF: I'm on a journey to learn\n"
+	.string "about all the berries in HOENN.\p"
+	.string "You're a trainer right?\p"
+	.string "Would you like to buy some berries\n"
+	.string "so I can learn how they work?\p"
+	.string "It'll be like you're my assistant!$"
 
 Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation: @ 82A79A6
 	.string "While BERRY plants are growing,\n"
@@ -198,6 +201,10 @@ Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries: @ 82A7AF3
 	.string "up different BERRIES and makes candies\l"
 	.string "for POKéMON.\p"
 	.string "I want some candy, too.$"
+
+Route104_PrettyPetalFlowerShop_Text_BuySomeBerries: @ 800021
+	.string "LEAF: Hey there! Would you like\n"
+	.string "to buy some berries?$"
 
 SootopolisCity_Text_NameIsKiriHaveOneOfThese: @ 82A7BB0
 	.string "Hi, what's your name?\p"

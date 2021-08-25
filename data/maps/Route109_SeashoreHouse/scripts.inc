@@ -23,8 +23,8 @@ Route109_SeashoreHouse_EventScript_AlreadyGaveIntroduction:: @ 8269428
 	end
 
 Route109_SeashoreHouse_EventScript_DefeatedTrainers:: @ 8269432
-	msgbox Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles, MSGBOX_DEFAULT
-	giveitem ITEM_SODA_POP, 6
+	msgbox Route109_SeashoreHouse_Text_TakeThisTM, MSGBOX_DEFAULT
+	giveitem ITEM_TM46_BULLDOZE
 	compare VAR_RESULT, FALSE
 	goto_if_eq Route109_SeashoreHouse_EventScript_BagFull
 	setflag FLAG_RECEIVED_6_SODA_POP
@@ -50,13 +50,13 @@ Route109_SeashoreHouse_EventScript_BuySodaPop:: @ 8269484
 	checkmoney 300, 0
 	compare VAR_RESULT, FALSE
 	goto_if_eq Route109_SeashoreHouse_EventScript_NotEnoughMoney
-	checkitemspace ITEM_SODA_POP, 1
+	checkitemspace ITEM_ADRENALINE_ORB, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq Route109_SeashoreHouse_EventScript_NotEnoughSpace
 	msgbox Route109_SeashoreHouse_Text_HereYouGo, MSGBOX_DEFAULT
 	removemoney 300, 0
 	updatemoneybox 0, 0
-	giveitem ITEM_SODA_POP
+	giveitem ITEM_ADRENALINE_ORB
 	hidemoneybox
 	release
 	end
@@ -114,13 +114,15 @@ Route109_SeashoreHouse_Text_ShowMeSomeHotMatches: @ 8269635
 	.string "I run this SEASHORE HOUSE just for\n"
 	.string "that reason alone!$"
 
-Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles: @ 8269685
-	.string "You're scorching hot!\n"
-	.string "Those battles blazed!\l"
-	.string "I'm more than just satisfied!\p"
+Route109_SeashoreHouse_Text_TakeThisTM: @ 8269685
+	.string "WOW! You're scorching hot!\n"
+	.string "Those battles blazed!\p"
+	.string "My adrenaline is PUMPING!\p"
 	.string "As thanks for showing me your hot\n"
-	.string "streak, I want you to take these.\p"
-	.string "It's half a dozen bottles of SODA POP!$"
+	.string "streak, I'll sell you my\l"
+	.string "famed ADRENALINE ORBS.\p"
+	.string "You should also take this.\p"
+	.string "It's a TECHNICAL MACHINE!$"
 
 Route109_SeashoreHouse_Text_BagFull: @ 826973A
 	.string "Oh, but hey, your BAG's jammed full.\n"
@@ -178,4 +180,3 @@ Route109_SeashoreHouse_Text_SimonPostBattle: @ 82699DF
 	.string "If one of my POKéMON knew the move\n"
 	.string "for carrying me across water on its\l"
 	.string "back, I could get rid of this inner tube.$"
-

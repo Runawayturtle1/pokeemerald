@@ -70,16 +70,37 @@ Route104_PrettyPetalFlowerShop_Pokemart_Plants: @ 822A3FC
 Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl:: @ 822A40C
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail
+	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_Leaf
 	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
 	release
 	end
 
-Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail:: @ 822A421
+Route104_PrettyPetalFlowerShop_EventScript_Leaf:: @ 822A421
+	lock
+	faceplayer
+	goto_if_set FLAG_MET_LEAF, Route104_PrettyPetalFlowerShop_EventScript_LeafShop
 	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
-	giveitem ITEM_WAILMER_PAIL
-	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_WAILMER_PAIL
+	waitmessage
+	setflag FLAG_MET_LEAF
+	pokemart LeafBerries_Route104
+	msgbox gText_LeafGoodLuckOutThere, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_EventScript_LeafShop:: @ 800020
+	message gText_LeafHowCanIHelp
+	waitmessage
+	pokemart LeafBerries_Route104
+	msgbox gText_LeafGoodLuckOutThere, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LeafBerries_Route104: @ 800024
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_NONE
 	release
 	end
 

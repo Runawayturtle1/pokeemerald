@@ -91,7 +91,7 @@ PetalburgWoods_EventScript_DevonResearcherPostBattle:: @ 822E138
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
 	waitmovement 0
 	msgbox PetalburgWoods_Text_ThatWasAwfullyClose, MSGBOX_DEFAULT
-	giveitem ITEM_GREAT_BALL
+	giveitem ITEM_TM10_HIDDEN_POWER
 	compare VAR_RESULT, FALSE
 	goto_if_eq PetalburgWoods_EventScript_BagFull
 	goto PetalburgWoods_EventScript_DevonResearcherFinish
@@ -371,7 +371,7 @@ PetalburgWoods_Text_ThatWasAwfullyClose: @ 822E63D
 	.string "That was awfully close!\p"
 	.string "Thanks to you, he didn't rob me of\n"
 	.string "these important papers.\p"
-	.string "I know, I'll give you a GREAT BALL as\n"
+	.string "I know, I'll give you a TM as\n"
 	.string "my thanks!$"
 
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro: @ 822E6C7
@@ -477,4 +477,3 @@ PetalburgWoods_Text_TrainerTipsPP: @ 822ED07
 	.string "make moves during battle.\p"
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
-

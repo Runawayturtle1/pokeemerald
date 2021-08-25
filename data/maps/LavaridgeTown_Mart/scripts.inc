@@ -21,7 +21,6 @@ LavaridgeTown_Mart_Pokemart: @ 81FF9E8
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_X_SPEED
 	.2byte ITEM_NONE
 	release
 	end
@@ -44,4 +43,3 @@ LavaridgeTown_Mart_Text_LocalSpecialtyOnMtChimney: @ 81FFA83
 	.string "On MT. CHIMNEY's peak, there's a local\n"
 	.string "specialty that you can buy only there.\p"
 	.string "Give it to a POKéMON--it will be elated.$"
-

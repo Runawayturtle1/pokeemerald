@@ -16,10 +16,8 @@ VerdanturfTown_House_Text_TrainersGatherAtPokemonLeague: @ 8203371
 	.string "all frighteningly well skilled.$"
 
 VerdanturfTown_House_Text_DefeatEliteFourInARow: @ 82033EE
-	.string "In the POKéMON LEAGUE, I think the\n"
-	.string "rules say that you have to battle the\l"
-	.string "ELITE FOUR all in a row.\p"
-	.string "If you lose to any of them, you have\n"
-	.string "to begin your challenge again from the\l"
-	.string "first one.$"
-
+	.string "Hi there! I'm the ROCK SMASH GAL!\p"
+	.string "...or I would be if my boyfriend,\n"
+	.string "the ROCK SMASH GUY, hadn't\l"
+	.string "stolen my HIDDEN MACHINE!\p"
+	.string "Now he's off in VERDANTURF TOWN...$"

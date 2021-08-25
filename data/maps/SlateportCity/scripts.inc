@@ -508,22 +508,23 @@ SlateportCity_EventScript_AquaGrunt11:: @ 81DD153
 	release
 	end
 
-SlateportCity_EventScript_DollClerk:: @ 81DD16A
+SlateportCity_EventScript_TerrainSeedsShop:: @ 81DD16A
 	lock
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration SlateportCity_PokemartDecor_Dolls
+	pokemart SlateportCity_PokemartDecor_Dolls
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 SlateportCity_PokemartDecor_Dolls: @ 81DD184
-	.2byte DECOR_AZURILL_DOLL
-	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_SKITTY_DOLL
-	.2byte DECOR_NONE
+	.2byte ITEM_GRASSY_SEED
+	.2byte ITEM_ELECTRIC_SEED
+	.2byte ITEM_MISTY_SEED
+	.2byte ITEM_PSYCHIC_SEED
+	.2byte ITEM_NONE
 	release
 	end
 

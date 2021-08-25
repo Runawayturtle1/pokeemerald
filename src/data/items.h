@@ -3912,10 +3912,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM08_BULK_UP] =
+    [ITEM_TM08_MACH_PUNCH] =
     {
         .name = _("TM08"),
-        .itemId = ITEM_TM08_BULK_UP,
+        .itemId = ITEM_TM08_MACH_PUNCH,
         .price = 3000,
         .description = sTM08Desc,
         .importance = 1,
@@ -4368,10 +4368,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM46_THIEF] =
+    [ITEM_TM46_BULLDOZE] =
     {
         .name = _("TM46"),
-        .itemId = ITEM_TM46_THIEF,
+        .itemId = ITEM_TM46_BULLDOZE,
         .price = 3000,
         .description = sTM46Desc,
         .importance = 1,
@@ -4422,6 +4422,18 @@ const struct Item gItems[] =
         .itemId = ITEM_TM50_OVERHEAT,
         .price = 3000,
         .description = sTM50Desc,
+        .importance = 1,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
+
+    [ITEM_TM51_SCALD] =
+    {
+        .name = _("TM51"),
+        .itemId = ITEM_TM51_SCALD,
+        .price = 3000,
+        .description = sTM51Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -6964,7 +6976,7 @@ const struct Item gItems[] =
     {
         .name = _("Electric Seed"),
         .itemId = ITEM_ELECTRIC_SEED,
-        .price = 4000,
+        .price = 400,
         .holdEffect = HOLD_EFFECT_SEEDS,
         .description = sElectricSeedDesc,
         .pocket = POCKET_ITEMS,
@@ -6976,7 +6988,7 @@ const struct Item gItems[] =
     {
         .name = _("Grassy Seed"),
         .itemId = ITEM_GRASSY_SEED,
-        .price = 4000,
+        .price = 400,
         .holdEffect = HOLD_EFFECT_SEEDS,
         .description = sGrassySeedDesc,
         .pocket = POCKET_ITEMS,
@@ -6988,7 +7000,7 @@ const struct Item gItems[] =
     {
         .name = _("Misty Seed"),
         .itemId = ITEM_MISTY_SEED,
-        .price = 4000,
+        .price = 400,
         .holdEffect = HOLD_EFFECT_SEEDS,
         .description = sMistySeedDesc,
         .pocket = POCKET_ITEMS,
@@ -7000,7 +7012,7 @@ const struct Item gItems[] =
     {
         .name = _("Psychic Seed"),
         .itemId = ITEM_PSYCHIC_SEED,
-        .price = 4000,
+        .price = 400,
         .holdEffect = HOLD_EFFECT_SEEDS,
         .description = sPsychicSeedDesc,
         .pocket = POCKET_ITEMS,

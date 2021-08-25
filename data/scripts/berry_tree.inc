@@ -21,9 +21,6 @@ BerryTree_EventScript_Sparkling:: @ 827434F
 BerryTree_EventScript_CheckSoil:: @ 8274359
 	lock
 	faceplayer
-	specialvar VAR_RESULT, PlayerHasBerries
-	compare VAR_RESULT, TRUE
-	goto_if_eq BerryTree_EventScript_WantToPlant
 	message BerryTree_Text_ItsSoftLoamySoil
 	waitmessage
 	waitbuttonpress

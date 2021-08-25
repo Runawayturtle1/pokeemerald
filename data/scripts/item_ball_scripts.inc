@@ -1,5 +1,5 @@
-Route102_EventScript_ItemPotion:: @ 8290CD8
-	finditem ITEM_POTION
+Route102_EventScript_ItemFullHeal:: @ 8290CD8
+	finditem ITEM_FULL_HEAL
 	end
 
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
@@ -18,12 +18,12 @@ Route104_EventScript_ItemPokeBall:: @ 8290D0C
 	finditem ITEM_POKE_BALL
 	end
 
-Route104_EventScript_ItemXAccuracy:: @ 8290D19
-	finditem ITEM_X_ACCURACY
+Route104_EventScript_ItemBigRoot:: @ 8290D19
+	finditem ITEM_BIG_ROOT
 	end
 
-Route104_EventScript_ItemPotion:: @ 8290D26
-	finditem ITEM_POTION
+Route104_EventScript_ItemPowerHerb:: @ 8290D26
+	finditem ITEM_POWER_HERB
 	end
 
 Route105_EventScript_ItemIron:: @ 8290D33
@@ -36,6 +36,10 @@ Route106_EventScript_ItemProtein:: @ 8290D40
 
 Route108_EventScript_ItemStarPiece:: @ 8290D4D
 	finditem ITEM_STAR_PIECE
+	end
+
+Route109_EventScript_ItemTM03:: @ 80003B
+	finditem ITEM_TM03
 	end
 
 Route109_EventScript_ItemPPUp:: @ 8290D5A
@@ -126,12 +130,12 @@ Route115_EventScript_ItemPPUp:: @ 8290E6B
 	finditem ITEM_PP_UP
 	end
 
-Route116_EventScript_ItemXSpecial:: @ 8290E78
-	finditem ITEM_X_SP_ATK
+Route116_EventScript_ItemFullHeal:: @ 8290E78
+	finditem ITEM_FULL_HEAL
 	end
 
-Route116_EventScript_ItemEther:: @ 8290E85
-	finditem ITEM_ETHER
+Route116_EventScript_ItemMiracleSeed:: @ 8290E85
+	finditem ITEM_MIRACLE_SEED
 	end
 
 Route116_EventScript_ItemRepel:: @ 8290E92
@@ -142,8 +146,9 @@ Route116_EventScript_ItemHPUp:: @ 8290E9F
 	finditem ITEM_HP_UP
 	end
 
-Route116_EventScript_ItemPotion:: @ 8290EAC
-	finditem ITEM_POTION
+Route116_EventScript_ItemLopunnite:: @ 8290EAC
+	goto_if_unset FLAG_OBTAINED_MEGA_RING, MegaStone_EventScript_MysteriousStone
+	finditem ITEM_LOPUNNITE
 	end
 
 Route117_EventScript_ItemGreatBall:: @ 8290EB9
@@ -354,8 +359,8 @@ GraniteCave_1F_EventScript_ItemEscapeRope:: @ 8291150
 	finditem ITEM_ESCAPE_ROPE
 	end
 
-GraniteCave_B1F_EventScript_ItemPokeBall:: @ 829115D
-	finditem ITEM_POKE_BALL
+GraniteCave_B1F_EventScript_ItemRockyHelmet:: @ 829115D
+	finditem ITEM_ROCKY_HELMET
 	end
 
 GraniteCave_B2F_EventScript_ItemRepel:: @ 829116A
@@ -363,7 +368,8 @@ GraniteCave_B2F_EventScript_ItemRepel:: @ 829116A
 	end
 
 GraniteCave_B2F_EventScript_ItemRareCandy:: @ 8291177
-	finditem ITEM_RARE_CANDY
+	goto_if_unset FLAG_OBTAINED_MEGA_RING, MegaStone_EventScript_MysteriousStone
+	finditem ITEM_MAWILITE
 	end
 
 JaggedPass_EventScript_ItemBurnHeal:: @ 8291184
@@ -657,3 +663,13 @@ MagmaHideout_4F_EventScript_MaxRevive:: @ 829151F
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope:: @ 829152C
 	finditem ITEM_ESCAPE_ROPE
 	end
+
+MegaStone_EventScript_MysteriousStone:: @ 800029
+	lock
+	msgbox MegaStone_Text_MysteriousStone, MSGBOX_DEFAULT
+	release
+	end
+
+MegaStone_Text_MysteriousStone:: @ 80002A
+	.string "It's a mysterious stone...\p"
+	.string "Better not touch it.$"

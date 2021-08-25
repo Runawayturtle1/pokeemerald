@@ -18,9 +18,6 @@ SootopolisCity_Mart_Pokemart: @ 82267AC
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_SHADOW_MAIL
 	.2byte ITEM_NONE
 	release
 	end
@@ -75,4 +72,3 @@ SootopolisCity_Mart_Text_FullRestoreItemOfDreams: @ 82268AF
 SootopolisCity_Mart_Text_DidSomethingAwaken: @ 8226928
 	.string "This weather…\n"
 	.string "Did something awaken?$"
-

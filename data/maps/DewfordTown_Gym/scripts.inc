@@ -424,9 +424,9 @@ DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis: @ 81FD0A8
 	.string "MACHINE, too.$"
 
 DewfordTown_Gym_Text_ExplainBulkUp: @ 81FD181
-	.string "That TM08 contains BULK UP.\p"
-	.string "It's a move that raises both ATTACK\n"
-	.string "and DEFENSE stats.\p"
+	.string "That TM08 contains MACH PUNCH.\p"
+	.string "It's a lightning-fast punch\n"
+	.string "that always hits first!.\p"
 	.string "… … … … … …$"
 
 DewfordTown_Gym_Text_RegisteredBrawly: @ 81FD1E0

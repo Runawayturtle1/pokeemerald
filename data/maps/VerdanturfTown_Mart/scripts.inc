@@ -22,7 +22,6 @@ VerdanturfTown_Mart_Pokemart: @ 82025A0
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_ICE_HEAL
 	.2byte ITEM_REPEL
-	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_NONE
 	release
@@ -57,4 +56,3 @@ VerdanturfTown_Mart_Text_NestBallOnWeakenedPokemon: @ 82026C9
 	.string "weakened POKéMON.\p"
 	.string "VERDANTURF is the only place you can\n"
 	.string "buy it.$"
-
